@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Viraj Kamat</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="header"></div>
+  <main>
+    <section>
+      <h2>Contact Information</h2>
+      <ul>
+        <li><strong>Location:</strong> Dallas, TX</li>
+        <li><strong>Phone:</strong> (631) 202-7996</li>
+        <li><strong>Email:</strong> <a href="mailto:viraj.kmt@gmail.com">viraj.kmt@gmail.com</a></li>
+        <li><strong>GitHub:</strong> <a href="https://github.com/viraj-kamat" target="_blank">github.com/viraj-kamat</a></li>
+        <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/virajkmt/" target="_blank">linkedin.com/in/virajkmt</a></li>
+      </ul>
+    </section>
+  </main>
+  <div id="footer"></div>
+  <script>
+    fetch('header.html').then(r => r.text()).then(t => document.getElementById('header').innerHTML = t);
+    fetch('footer.html').then(r => r.text()).then(t => document.getElementById('footer').innerHTML = t);
+  </script>
+</body>
+</html> 

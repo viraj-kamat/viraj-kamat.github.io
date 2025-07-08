@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Education | Viraj Kamat</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="header"></div>
+  <main>
+    <section>
+      <h2>Master of Science in Computer & Information Sciences (2020)</h2>
+      <p>Concentration in Data Science<br>
+      The State University of New York at Stony Brook</p>
+    </section>
+    <section>
+      <h2>Bachelor of Engineering in Computer Engineering (2009)</h2>
+      <p>Goa Engineering College</p>
+    </section>
+  </main>
+  <div id="footer"></div>
+  <script>
+    fetch('header.html').then(r => r.text()).then(t => document.getElementById('header').innerHTML = t);
+    fetch('footer.html').then(r => r.text()).then(t => document.getElementById('footer').innerHTML = t);
+  </script>
+</body>
+</html> 
