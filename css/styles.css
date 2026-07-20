@@ -80,7 +80,12 @@ h2 {
 h3 {
   color: #3949ab;
   margin-bottom: 0.5rem;
+  margin-top: 1.25rem;
   font-size: 1.15rem;
+}
+
+h3:first-of-type {
+  margin-top: 0.5rem;
 }
 
 ul {

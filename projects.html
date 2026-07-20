@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects & Research | Viraj Kamat</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="header"></div>
+  <main>
+    <section>
+      <h2>Notable Projects</h2>
+
+      <h3>IBM Lenovo-PC Blockchain Portal</h3>
+      <p>A blockchain-based billing portal that settled billing disputes between IBM and Lenovo with immutable, transparent transaction storage. Used Python extensively for data processing and process automation, with microservices deployed on IBM Bluemix.</p>
+      <p><strong>Technologies:</strong> Python, Blockchain, Hyperledger, Node.js, Kubernetes, Docker, IBM Bluemix</p>
+
+      <h3>Cross-Currency Payment Application</h3>
+      <p>An Android application built with Cordova that used the Ripple platform to perform cross-currency and cross-border payments in seconds. Developed as a proof of concept while reviewing competing blockchain technologies.</p>
+      <p><strong>Technologies:</strong> Cordova/PhoneGap, Ripple, Android, JavaScript</p>
+
+      <h3>Government of Goa Web Portals</h3>
+      <p>State department portals including Goa Dental College and Goa Printing Press, built on the LAMP stack and deployed on Government of Goa servers. Included security audits for compliance with Government of India norms.</p>
+      <p><strong>Technologies:</strong> PHP, MySQL, Joomla, CodeIgniter, WordPress, HTML/CSS, JavaScript</p>
+
+      <h3>Electronic Health Record (EHR) Management</h3>
+      <p>Master's advanced project enabling secure sharing and access control of medical documents between patients and doctors/hospitals using Hyperledger Fabric, with a focus on fast, permissioned electronic exchange.</p>
+      <p><strong>Technologies:</strong> Hyperledger Fabric, Blockchain, Computer Science Capstone</p>
+    </section>
+
+    <section>
+      <h2>Research Experience</h2>
+      <ul>
+        <li><strong>Blockchain R&D (Persistent Systems):</strong> Reviewed competing blockchain technologies and developed proof-of-concept applications, including Ripple-based cross-border payments.</li>
+        <li><strong>Hyperledger Platform Review (IBM / Lenovo-PC):</strong> Evaluated Hyperledger v0.6 for the Lenovo-PC billing solution under guidance from members of the IBM Watson Research Center.</li>
+        <li><strong>EHR on Blockchain (SUNY Stony Brook):</strong> Explored electronic healthcare record management with Hyperledger Fabric as part of the M.S. program, focusing on sharing and access control of medical documents.</li>
+      </ul>
+    </section>
+  </main>
+  <div id="footer"></div>
+  <script>
+    fetch('header.html').then(r => r.text()).then(t => document.getElementById('header').innerHTML = t);
+    fetch('footer.html').then(r => r.text()).then(t => document.getElementById('footer').innerHTML = t);
+  </script>
+</body>
+</html>
