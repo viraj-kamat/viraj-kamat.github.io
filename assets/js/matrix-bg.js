@@ -15,6 +15,8 @@
   var columns = [];
   var chars = "01";
   var rafId = 0;
+  var lastStep = 0;
+  var stepMs = 90;
 
   function resize() {
     canvas.width = window.innerWidth;
@@ -22,11 +24,15 @@
     var colCount = Math.ceil(canvas.width / fontSize);
     columns = new Array(colCount);
     for (var i = 0; i < colCount; i++) {
-      columns[i] = Math.random() * canvas.height;
+      columns[i] = Math.random() * (canvas.height / fontSize);
     }
   }
 
-  function draw() {
+  function draw(now) {
+    rafId = window.requestAnimationFrame(draw);
+    if (now - lastStep < stepMs) return;
+    lastStep = now;
+
     ctx.fillStyle = "rgba(238, 242, 246, 0.06)";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
@@ -46,12 +52,10 @@
         columns[i]++;
       }
     }
-
-    rafId = window.requestAnimationFrame(draw);
   }
 
   resize();
-  draw();
+  rafId = window.requestAnimationFrame(draw);
 
   var resizeTimer;
   window.addEventListener("resize", function () {
