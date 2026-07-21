@@ -27,11 +27,11 @@
   }
 
   function draw() {
-    ctx.fillStyle = "rgba(238, 242, 246, 0.08)";
+    ctx.fillStyle = "rgba(238, 242, 246, 0.06)";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     ctx.font = fontSize + "px 'JetBrains Mono', ui-monospace, monospace";
-    ctx.fillStyle = "rgba(15, 118, 110, 0.55)";
+    ctx.fillStyle = "rgba(13, 148, 136, 0.85)";
 
     for (var i = 0; i < columns.length; i++) {
       var text = chars.charAt(Math.floor(Math.random() * chars.length));
